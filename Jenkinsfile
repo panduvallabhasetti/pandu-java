@@ -13,6 +13,7 @@ pipeline{
 
 
              gitCheckout{
+                    branch : "master",
                     url : "https://github.com/panduvallabhasetti/javanew.git"
                      }
             
