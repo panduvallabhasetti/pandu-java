@@ -10,13 +10,12 @@ pipeline{
         stage(' Git Checkout'){
 
             steps{
-
+                script{
 
              gitCheckout{
-                    branch : "master",
                     url : "https://github.com/panduvallabhasetti/javanew.git"
-                     }
-            
+                    }
+                }
             }
         }
     } 
