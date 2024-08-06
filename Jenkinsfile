@@ -1,4 +1,4 @@
-@library('my-shared-library') _
+@Library('my-shared-library') _
 
 pipeline{
     
@@ -13,6 +13,7 @@ pipeline{
 
 
              gitCheckout{
+                    branch : "main",
                     url : "https://github.com/panduvallabhasetti/javanew.git"
                      }
             
