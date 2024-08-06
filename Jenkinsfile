@@ -1,4 +1,5 @@
 pipeline{
+    @library(my-shared-lib) _
 
     agent any
 
@@ -10,7 +11,10 @@ pipeline{
 
                 script{
 
-                    git 'https://github.com/panduvallabhasetti/javanew.git'
+                     gitCheckout{
+                        branch = "main"
+                        url = "https://github.com/panduvallabhasetti/javanew.git"
+                     }
                 }
             }
         }
