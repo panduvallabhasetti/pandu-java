@@ -1,5 +1,5 @@
 pipeline{
-    @library(my-shared-lib) _
+    @library('my-shared-library') _
 
     agent any
 
