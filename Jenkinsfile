@@ -1,4 +1,5 @@
 @library('my-shared-library') _
+
 pipeline{
     
 
@@ -10,13 +11,12 @@ pipeline{
 
             steps{
 
-                script{
 
-                     gitCheckout{
-                        branch = "main"
-                        url = "https://github.com/panduvallabhasetti/javanew.git"
+             gitCheckout{
+                    branch : "main",
+                    url : "https://github.com/panduvallabhasetti/javanew.git"
                      }
-                }
+            
             }
         }
     } 
