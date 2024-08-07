@@ -20,7 +20,7 @@ pipeline {
         stage('mvn Integratin Test'){
              steps {
                 script{
-                    mvnIntegration()
+                    mvnIntegrationTest()
                 }
              }
         }
