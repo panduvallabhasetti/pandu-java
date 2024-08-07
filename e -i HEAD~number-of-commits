@@ -1,0 +1,246 @@
+[33mcommit 3947f4a5861bb66b6cfa2a102835cbc0fd338375[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: panduvallabhasetti <panduvallabhasetti96@gmail.com>
+Date:   Wed Aug 7 11:57:54 2024 +0530
+
+    new code
+
+[1mdiff --git a/Jenkinsfile b/Jenkinsfile[m
+[1mindex a8632b3..5d4622d 100644[m
+[1m--- a/Jenkinsfile[m
+[1m+++ b/Jenkinsfile[m
+[36m@@ -1,24 +1,11 @@[m
+ @Library('my-shared-library') _[m
+[31m-[m
+[31m-pipeline{[m
+[31m-    [m
+[31m-[m
+[32m+[m[32mpipeline {[m
+     agent any[m
+[31m-[m
+[31m-    stages{[m
+[31m-[m
+[31m-        stage(' Git Checkout'){[m
+[31m-[m
+[31m-            steps{[m
+[31m-                script{[m
+[31m-[m
+[31m-             gitCheckout{[m
+[31m-                    url : "https://github.com/panduvallabhasetti/javanew.git"[m
+[31m-                    }[m
+[31m-                }[m
+[32m+[m[32m    stages {[m
+[32m+[m[32m        stage('Checkout') {[m
+[32m+[m[32m            steps {[m
+[32m+[m[32m                gitCheckout(repo: 'https://github.com/panduvallabhasetti/javanew.git', branch: 'master')[m
+             }[m
+         }[m
+[31m-    } [m
+[31m-[m
+[31m-[m
+[32m+[m[32m    }[m
+ }[m
+[1mdiff --git a/pom.xml b/pom.xml[m
+[1mindex 28197c8..c0fa0bd 100644[m
+[1m--- a/pom.xml[m
+[1m+++ b/pom.xml[m
+[36m@@ -1,71 +1 @@[m
+[31m-<?xml version="1.0" encoding="UTF-8"?>[m
+[31m-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"[m
+[31m-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">[m
+[31m-    <modelVersion>4.0.0</modelVersion>[m
+[31m-    <parent>[m
+[31m-        <groupId>org.springframework.boot</groupId>[m
+[31m-        <artifactId>spring-boot-starter-parent</artifactId>[m
+[31m-        <version>2.2.1.RELEASE</version>[m
+[31m-        <relativePath/> <!-- lookup parent from repository -->[m
+[31m-    </parent>[m
+[31m-    <groupId>com.minikube.sample</groupId>[m
+[31m-    <artifactId>kubernetes-configmap-reload</artifactId>[m
+[31m-    <version>0.0.1-SNAPSHOT</version>[m
+[31m-    <packaging>jar</packaging>[m
+[31m-    <name>minikube-sample</name>[m
+[31m-    <description>Demo project for Spring Cloud Kubernetes</description>[m
+[31m-[m
+[31m-    <properties>[m
+[31m-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>[m
+[31m-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>[m
+[31m-        <java.version>1.8</java.version>[m
+[31m-    </properties>[m
+[31m-[m
+[31m-    <dependencies>[m
+[31m-        <dependency>[m
+[31m-            <groupId>org.springframework.boot</groupId>[m
+[31m-            <artifactId>spring-boot-starter-web</artifactId>[m
+[31m-        </dependency>[m
+[31m-[m
+[31m-        <dependency>[m
+[31m-            <groupId>org.springframework.boot</groupId>[m
+[31m-            <artifactId>spring-boot-starter-actuator</artifactId>[m
+[31m-        </dependency>[m
+[31m-[m
+[31m-        <dependency>[m
+[31m-            <groupId>org.springframework.cloud</groupId>[m
+[31m-            <artifactId>spring-cloud-starter-kubernetes-config</artifactId>[m
+[31m-            <version>1.1.0.RELEASE</version>[m
+[31m-        </dependency>[m
+[31m-[m
+[31m-        <dependency>[m
+[31m-            <groupId>org.projectlombok</groupId>[m
+[31m-            <artifactId>lombok</artifactId>[m
+[31m-            <version>1.18.4</version>[m
+[31m-            <scope>provided</scope>[m
+[31m-        </dependency>[m
+[31m-[m
+[31m-[m
+[31m-        <dependency>[m
+[31m-            <groupId>org.springframework.boot</groupId>[m
+[31m-            <artifactId>spring-boot-starter-test</artifactId>[m
+[31m-            <scope>test</scope>[m
+[31m-        </dependency>[m
+[31m-        <dependency>[m
+[31m-            <groupId>org.springframework.security</groupId>[m
+[31m-            <artifactId>spring-security-test</artifactId>[m
+[31m-            <scope>test</scope>[m
+[31m-        </dependency>[m
+[31m-    </dependencies>[m
+[31m-[m
+[31m-    <build>[m
+[31m-        <plugins>[m
+[31m-            <plugin>[m
+[31m-                <groupId>org.springframework.boot</groupId>[m
+[31m-                <artifactId>spring-boot-maven-plugin</artifactId>[m
+[31m-            </plugin>[m
+[31m-        </plugins>[m
+[31m-    </build>[m
+[31m-[m
+[31m-[m
+[31m-</project>[m
+\ No newline at end of file[m
+[32m+[m[32m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[m
+\ No newline at end of file[m
+
+[33mcommit 84f91f22d03962923945a7c34190a98c37d0bc36[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: panduvallabhasetti <panduvallabhasetti96@gmail.com>
+Date:   Tue Aug 6 22:52:13 2024 +0530
+
+    new jenkins
+
+[1mdiff --git a/Jenkinsfile b/Jenkinsfile[m
+[1mindex 6359c8c..a8632b3 100644[m
+[1m--- a/Jenkinsfile[m
+[1m+++ b/Jenkinsfile[m
+[36m@@ -10,13 +10,12 @@[m [mpipeline{[m
+         stage(' Git Checkout'){[m
+ [m
+             steps{[m
+[31m-[m
+[32m+[m[32m                script{[m
+ [m
+              gitCheckout{[m
+[31m-                    branch : "master",[m
+                     url : "https://github.com/panduvallabhasetti/javanew.git"[m
+[31m-                     }[m
+[31m-            [m
+[32m+[m[32m                    }[m
+[32m+[m[32m                }[m
+             }[m
+         }[m
+     } [m
+
+[33mcommit d87e87cef4854a2bf3537d6d209e75d908e1f2e8[m
+Author: panduvallabhasetti <panduvallabhasetti96@gmail.com>
+Date:   Tue Aug 6 22:48:38 2024 +0530
+
+    new jenkins
+
+[1mdiff --git a/Jenkinsfile b/Jenkinsfile[m
+[1mindex 6777485..6359c8c 100644[m
+[1m--- a/Jenkinsfile[m
+[1m+++ b/Jenkinsfile[m
+[36m@@ -13,6 +13,7 @@[m [mpipeline{[m
+ [m
+ [m
+              gitCheckout{[m
+[32m+[m[32m                    branch : "master",[m
+                     url : "https://github.com/panduvallabhasetti/javanew.git"[m
+                      }[m
+             [m
+
+[33mcommit c5761012dfdf7b5719601d6464bd7d80b8195454[m
+Author: panduvallabhasetti <panduvallabhasetti96@gmail.com>
+Date:   Tue Aug 6 22:47:23 2024 +0530
+
+    new jenkins
+
+[1mdiff --git a/src/Jenkinsfile b/Jenkinsfile[m
+[1msimilarity index 99%[m
+[1mrename from src/Jenkinsfile[m
+[1mrename to Jenkinsfile[m
+[1mindex ec8f52b..6777485 100644[m
+[1m--- a/src/Jenkinsfile[m
+[1m+++ b/Jenkinsfile[m
+[36m@@ -21,4 +21,4 @@[m [mpipeline{[m
+     } [m
+ [m
+ [m
+[31m-}[m
+\ No newline at end of file[m
+[32m+[m[32m}[m
+
+[33mcommit 911a1b11ad9551b147bbad0dc9d1c9684bb82ced[m
+Author: panduvallabhasetti <panduvallabhasetti96@gmail.com>
+Date:   Tue Aug 6 22:45:51 2024 +0530
+
+    new jenkins
+
+[1mdiff --git a/Jenkinsfile b/src/Jenkinsfile[m
+[1msimilarity index 100%[m
+[1mrename from Jenkinsfile[m
+[1mrename to src/Jenkinsfile[m
+
+[33mcommit 8fb6615f7a5e8d8a23a261453200a4a5dc3e0b45[m
+Author: panduvallabhasetti <panduvallabhasetti96@gmail.com>
+Date:   Tue Aug 6 17:59:48 2024 +0530
+
+    new java
+
+[1mdiff --git a/Jenkinsfile b/Jenkinsfile[m
+[1mindex 71aa836..ec8f52b 100644[m
+[1m--- a/Jenkinsfile[m
+[1m+++ b/Jenkinsfile[m
+[36m@@ -13,7 +13,6 @@[m [mpipeline{[m
+ [m
+ [m
+              gitCheckout{[m
+[31m-                    branch : "main",[m
+                     url : "https://github.com/panduvallabhasetti/javanew.git"[m
+                      }[m
+             [m
+
+[33mcommit ecc3be05f11e867a65542982ab06c23b2a94ebbc[m
+Author: panduvallabhasetti <panduvallabhasetti96@gmail.com>
+Date:   Tue Aug 6 17:59:14 2024 +0530
+
+    new java
+
+[1mdiff --git a/Jenkinsfile b/Jenkinsfile[m
+[1mindex 7ecf26f..71aa836 100644[m
+[1m--- a/Jenkinsfile[m
+[1m+++ b/Jenkinsfile[m
+[36m@@ -1,4 +1,4 @@[m
+[31m-@library('my-shared-library') _[m
+[32m+[m[32m@Library('my-shared-library') _[m
+ [m
+ pipeline{[m
+     [m
+[36m@@ -13,6 +13,7 @@[m [mpipeline{[m
+ [m
+ [m
+              gitCheckout{[m
+[32m+[m[32m                    branch : "main",[m
+                     url : "https://github.com/panduvallabhasetti/javanew.git"[m
+                      }[m
+             [m
+
+[33mcommit 284a97aaf2cf39bfeee1bf7f241bee946a4c8fb4[m
+Author: panduvallabhasetti <panduvallabhasetti9
