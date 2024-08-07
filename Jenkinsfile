@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                gitCheckout(repo: 'https://github.com/panduvallabhasetti/pandu-java.git', branch: 'master')
+                gitCheckout{
+                    branch : 'master',
+                    url : 'git 'https://github.com/panduvallabhasetti/pandu-java.git'''
+                }
             }
         }
     }
