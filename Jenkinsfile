@@ -6,8 +6,7 @@ pipeline {
             steps {
                 gitCheckout(
                     url : 'https://github.com/panduvallabhasetti/pandu-java.git'
-                    )
-                }
+                )
             }
         }
     }
