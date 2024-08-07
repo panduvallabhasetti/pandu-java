@@ -24,5 +24,12 @@ pipeline {
                 }
              }
         }
+        stage('Static Code Analysis : Sonarqube'){
+             steps {
+                script{
+                    staticCodeAnalysis()
+                }
+             }
+        }
     }
 }
