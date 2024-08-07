@@ -5,6 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 gitCheckout(
+                    branch : 'master',
                     url : 'https://github.com/panduvallabhasetti/pandu-java.git'
                 )
             }
