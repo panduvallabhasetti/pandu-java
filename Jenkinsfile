@@ -1,24 +1,11 @@
 @Library('my-shared-library') _
-
-pipeline{
-    
-
+pipeline {
     agent any
-
-    stages{
-
-        stage(' Git Checkout'){
-
-            steps{
-                script{
-
-             gitCheckout{
-                    url : "https://github.com/panduvallabhasetti/javanew.git"
-                    }
-                }
+    stages {
+        stage('Checkout') {
+            steps {
+                gitCheckout(repo: 'https://github.com/panduvallabhasetti/javanew.git', branch: 'master')
             }
         }
-    } 
-
-
+    }
 }
