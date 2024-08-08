@@ -27,7 +27,7 @@ pipeline {
         stage('Static Code Analysis : Sonarqube'){
              steps {
                 script{
-                    withCredentials([string(credentialsId: 'squ_64b99cb9d3de40e6085d682d9c2691cc417fcfc2', variable: 'SONAR_TOKEN')]) {
+                    withCredentials([string(credentialsId: 'squ_55195beeca28af803a5cd2c2400bbe9c52bd6452', variable: 'SONAR_TOKEN')]) {
                     sh 'mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN'
                     statiCodeAnalysis()
                     }
