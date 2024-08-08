@@ -30,7 +30,8 @@ pipeline {
                     withCredentials([string(credentialsId: 'squ_64b99cb9d3de40e6085d682d9c2691cc417fcfc2', variable: 'SONAR_TOKEN')]) {
                     sh 'mvn sonar:sonar -Dsonar.login=$SONAR_TOKEN'
                     statiCodeAnalysis()
-                }
+                    }
+                }   
             }
         }
     }    
