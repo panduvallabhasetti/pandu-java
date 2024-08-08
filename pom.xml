@@ -18,6 +18,11 @@
         <java.version>17</java.version> <!-- Specify your Java version -->
     </properties>
 
+    <properties>
+        <sonar.login>squ_64b99cb9d3de40e6085d682d9c2691cc417fcfc2</sonar.login>
+    </properties>
+
+
     <dependencies>
         <!-- Spring Boot Starter Web -->
         <dependency>
